@@ -1,7 +1,6 @@
 const dash={
     data(){
         return{
-
             label :'',
             displayIn:1,
             player_one_color: "#ffffff",
