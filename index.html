@@ -22,7 +22,7 @@
                 <!-- a div that are loop rhougth the rows a create on row cpletlet 8 rows -->
                 <div class="col" v-for="r in rows">
                     <!-- a div for the black cell in the board -->
-                    <div v-if="(c.index+r.index)%2==1" class="square-white" v-bind:style="{'background-color':player_one_color}" v-on:click = "diplayLabel(c.letter,r.index)">
+                    <div v-if="(c.index+r.index)%2==1" class="square" v-bind:style="{'background-color':player_one_color}" v-on:click = "diplayLabel(c.letter,r.index)">
                         <!-- a span for displaying for rows label -->
                         <span   v-if="c.index==displayIn" v-bind:style="{'color':player_two_color}">
                             {{r.index}}
@@ -33,7 +33,7 @@
                         </span>
                     </div>
                     <!-- a div for the white cell in the board -->
-                    <div v-if="(c.index+r.index)%2==0" class="square-black" v-bind:style="{'background-color':player_two_color}" v-on:click = "diplayLabel(c.letter,r.index)">
+                    <div v-if="(c.index+r.index)%2==0" class="square" v-bind:style="{'background-color':player_two_color}" v-on:click = "diplayLabel(c.letter,r.index)">
                         <!-- a span for displaying for rows label -->
                         <span v-if="c.index== displayIn"  v-bind:style="{'color':player_one_color}"> 
                             {{r.index}}
